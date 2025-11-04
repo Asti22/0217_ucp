@@ -10,7 +10,7 @@ app.listen(PORT, () => {
     console.log(`Server is running on 3000`);
     });
 db.sequelize.sync().then(() => {
-    console.log("Database synchronized");
+    console.log("Database ");
 }).catch((err) => {
     console.error("Error synchronizing database:", err);
 });
