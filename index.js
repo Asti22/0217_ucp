@@ -54,7 +54,7 @@ app.delete('/film/:id', async (req, res) => {
     try {
         const film = await db.Film.findByPk(id);
         if (!film) {
-            return res.status(404).send({ message: 'Komik not found' });
+            return res.status(404).send({ message: 'film tidak ditemukan' });
         }
         await film.destroy();
         res.send({ message: 'Film dihapus' });
