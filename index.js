@@ -40,7 +40,7 @@ app.put('/film/:id', async (req, res) => {
     try {
         const film = await db.Film.findByPk(id);
         if (!film) {
-            return res.status(404).send({ message: 'Komik not found' });
+            return res.status(404).send({ message: 'Film tidak ditemukan' });
         }
         await film.update(data);
         res.send(film);
